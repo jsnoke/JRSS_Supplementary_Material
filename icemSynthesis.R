@@ -28,13 +28,6 @@ sampDF = sampDF[, -4]
 sampDF$disability = sampDF$recodeDisability
 sampDF = sampDF[, -14]
 
-## clust
-#library(ClustOfVar)
-#kClust = hclustvar(X.quanti = sampDF[, c(5:11)])
-#summary(cutreevar(kClust, 3))
-#kClust = kmeansvar(X.quanti = sampDF[, c(5:11)], init = 3, nstart = 1000)
-#summary(kClust)
-
 sampDF$n_relations = sampDF$nlodgers + sampDF$nboarders
 sampDF$n_lodgers = sampDF$nservants + sampDF$nvisitors + sampDF$nkn
 sampDF$n_others = sampDF$nfamgteq15 + sampDF$nfamlt15
